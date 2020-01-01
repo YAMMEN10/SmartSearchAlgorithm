@@ -10,7 +10,22 @@ import java.util.List;
 
 public class ParseJson {
 
-    public Rule extract_data() {
+
+    public ParseJson() {
+        rule=new Rule();
+    }
+
+    private Rule rule;
+
+    public Rule getRule() {
+        return rule;
+    }
+
+    public void setRule(Rule rule) {
+        this.rule = rule;
+    }
+
+    public void extract_data() {
         String data = new FileReader("inputs/data.txt").ReadInput();
         JSONObject input = new JSONObject(data);
         JSONArray days_json = input.getJSONArray("days");
@@ -22,7 +37,17 @@ public class ParseJson {
             System.out.println("s");
         }
 
-        return null;
 
     }
+
+    public List<MasterStudent> add_master_students(JSONObject input)
+    {
+        JSONObject master_students_json=input.getJSONObject("master_student");
+        rule.setMaster_student_watches(master_students_json.getInt("watch_count"));
+        JSONArray master_students_names_json=input.getJSONArray("");
+
+
+        return null;
+    }
+
 }
