@@ -1,5 +1,7 @@
 package Model;
 
+import javafx.util.Pair;
+
 import java.util.*;
 
 /**
@@ -16,7 +18,7 @@ public class Theater {
     /**
      * 
      */
-    private Pair students_rang;
+    private Pair<Integer,Integer> students_rang;
 
     /**
      * 

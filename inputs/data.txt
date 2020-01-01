@@ -1,0 +1,135 @@
+{
+    "days": [
+        {
+            "day_name": "sunday",
+            "Period": [
+                {
+                    "subject_name": "name",
+                    "total_student": 180
+                },
+                {
+                    "subject_name": "name",
+                    "total_student": 180
+                },
+                {
+                    "subject_name": "name",
+                    "total_student": 180
+                }
+            ]
+        }
+    ],
+    "Theater": [
+        {
+            "threat_name": "name",
+            "size_student": 100,
+            "floor_number": 1,
+            "watcher_number": 2
+        }
+    ],
+    "boss": {
+        "watch_count": 1,
+        "names": [
+            {
+                "boss_name": "d",
+                "limitation": {
+                    "basic_condition": {
+                        "days_condition": {
+                            "can_get": [
+                                "sunday",
+                                "monday"
+                            ],
+                            "cant_not_get": [
+                                "thirday"
+                            ]
+                        },
+                        "period_condition": {
+                            "can_get": [
+                                "Period1",
+                                "Period2"
+                            ],
+                            "cant_not_get": [
+                                "Period3"
+                            ],
+                            "count_of_period_max": 2
+                        }
+                    },
+                    "favorite": {
+                        "days_condition": {
+                            "favorite_get": [
+                                "sunday",
+                                "monday"
+                            ]
+                        },
+                        "period_condition": {
+                            "favorite_gett": [
+                                "Period1",
+                                "Period2"
+                            ]
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "master_student": {
+        "watch_count": 1,
+        "names": [
+            {
+                "student_name": "",
+                "limitation": {
+                    "basic_condition": {
+                        "days_condition": {
+                            "can_get": [
+                                "sunday",
+                                "monday"
+                            ],
+                            "cant_not_get": [
+                                "thirday"
+                            ]
+                        },
+                        "period_condition": {
+                            "can_get": [
+                                "Period1",
+                                "Period2"
+                            ],
+                            "cant_not_get": [
+                                "Period3"
+                            ],
+                            "count_of_period_max": 2
+                        }
+                    },
+                    "favorite": {
+                        "days_condition": {
+                            "favorite_get": [
+                                "sunday",
+                                "monday"
+                            ]
+                        },
+                        "period_condition": {
+                            "favorite_gett": [
+                                "Period1",
+                                "Period2"
+                            ]
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "secretary": {
+        "watch_count": 2,
+        "names": [
+            {
+                "secretary_name": "mahmod"
+            }
+        ]
+    },
+    "employee": {
+        "watch_count": 2,
+        "names": [
+            {
+                "secretary_name": "mahmod"
+            }
+        ]
+    }
+}
