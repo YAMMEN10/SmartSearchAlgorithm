@@ -3,14 +3,13 @@ package Models;
 import java.util.List;
 
 public class StateTableClass {
+    List<Theater> theaters;
 
-    private List<Day> days;
-
-    public List<Day> getDays() {
-        return days;
+    public List<Theater> getTheaters() {
+        return theaters;
     }
 
-    public void setDays(List<Day> days) {
-        this.days = days;
+    public void setTheaters(List<Theater> theaters) {
+        this.theaters = theaters;
     }
 }

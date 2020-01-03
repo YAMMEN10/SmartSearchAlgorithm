@@ -17,10 +17,8 @@ public class ParseJson {
         JSONObject input_json = new JSONObject(file_reader.ReadInput());
         rule = new Rule(getTheaterInformation(input_json), getDayInformation(input_json), getBosses(input_json),
                 getSecretary(input_json), getMasterStudent(input_json), getEmployee(input_json),
-                getEmployeeWatches(input_json),getProfessorWatches(input_json),getEngineerWatches(input_json),
+                getEmployeeWatches(input_json), getProfessorWatches(input_json), getEngineerWatches(input_json),
                 getMasterWatches(input_json));
-
-        System.out.println("");
     }
 
 
@@ -154,26 +152,25 @@ public class ParseJson {
         return secretaries;
     }
 
-    private int getProfessorWatches(JSONObject input_json){
+    private int getProfessorWatches(JSONObject input_json) {
         JSONObject employee_json = input_json.getJSONObject("boss");
         return employee_json.getInt("watch_count");
     }
 
-    private int getEngineerWatches(JSONObject input_json){
+    private int getEngineerWatches(JSONObject input_json) {
         JSONObject employee_json = input_json.getJSONObject("boss");
         return employee_json.getInt("watch_count");
     }
 
-    private int getMasterWatches(JSONObject input_json){
+    private int getMasterWatches(JSONObject input_json) {
         JSONObject employee_json = input_json.getJSONObject("master_student");
         return employee_json.getInt("watch_count");
     }
 
-    private int getEmployeeWatches(JSONObject input_json){
+    private int getEmployeeWatches(JSONObject input_json) {
         JSONObject employee_json = input_json.getJSONObject("secretary");
         return employee_json.getInt("watch_count");
     }
-
 
 
     public Rule getRule() {
