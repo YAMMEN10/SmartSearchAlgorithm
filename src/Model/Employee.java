@@ -1,11 +1,9 @@
 package Model;
 
-import java.util.*;
-
 /**
  * 
  */
-public class Employee extends WithOutConstaint {
+public class Employee extends WithOutLimitation {
 
     /**
      * Default constructor

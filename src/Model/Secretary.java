@@ -1,16 +1,11 @@
 package Model;
 
-import java.util.*;
-
 /**
  * 
  */
-public class Secretary extends WithLimitation {
+public class Secretary extends WithOutLimitation {
 
-    /**
-     * Default constructor
-     */
-    public Secretary() {
+    public Secretary(String name) {
+        super(name);
     }
-
 }

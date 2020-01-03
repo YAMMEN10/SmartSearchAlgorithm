@@ -5,17 +5,12 @@ import java.util.*;
 /**
  * 
  */
-public class UniversityMember {
+public abstract class UniversityMember {
 
-    /**
-     * Default constructor
-     */
-    public UniversityMember() {
+    public UniversityMember(String name) {
+        this.name = name;
     }
 
-    /**
-     * 
-     */
     protected String name;
 
     public String getName() {

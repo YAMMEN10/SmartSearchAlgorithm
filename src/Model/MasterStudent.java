@@ -1,16 +1,7 @@
 package Model;
 
-import java.util.*;
-
-/**
- * 
- */
-public class MasterStudent extends WithOutConstaint {
-
-    /**
-     * Default constructor
-     */
-    public MasterStudent() {
+public class MasterStudent extends WithLimitation {
+    public MasterStudent(String name, Limitation basic_limitaction, Limitation un_basic_limitaction) {
+        super(name, basic_limitaction, un_basic_limitaction);
     }
-
 }

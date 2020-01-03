@@ -1,58 +1,37 @@
 package Model;
 
-import java.util.*;
+import java.util.List;
 
-/**
- * 
- */
 public class Limitation {
 
-    /**
-     * Default constructor
-     */
-    public Limitation() {
-    }
-
-    /**
-     * 
-     */
-    private List<DayName> avaliable_days;
-
-    /**
-     * 
-     */
-    private List<DayName> nonavaliable_days;
-
-    /**
-     * 
-     */
+    private List<DayName> available_days;
+    private List<DayName> non_available_days;
     private List<Integer> available_period;
+    private List<Integer> non_available_period;
+    private Integer continue_period;
 
-    /**
-     * 
-     */
-    private List<Integer> nonavailable_period;
-
-    /**
-     * 
-     */
-    private int continue_period;
-
-
-    public List<DayName> getAvaliable_days() {
-        return avaliable_days;
+    public Limitation(List<DayName> available_days, List<DayName> non_available_days, List<Integer> available_period, List<Integer> non_available_period, Integer continue_period) {
+        this.available_days = available_days;
+        this.non_available_days = non_available_days;
+        this.available_period = available_period;
+        this.non_available_period = non_available_period;
+        this.continue_period = continue_period;
     }
 
-    public void setAvaliable_days(List<DayName> avaliable_days) {
-        this.avaliable_days = avaliable_days;
+    public List<DayName> getAvailable_days() {
+        return available_days;
     }
 
-    public List<DayName> getNonavaliable_days() {
-        return nonavaliable_days;
+    public void setAvailable_days(List<DayName> available_days) {
+        this.available_days = available_days;
     }
 
-    public void setNonavaliable_days(List<DayName> nonavaliable_days) {
-        this.nonavaliable_days = nonavaliable_days;
+    public List<DayName> getNon_available_days() {
+        return non_available_days;
+    }
+
+    public void setNon_available_days(List<DayName> non_available_days) {
+        this.non_available_days = non_available_days;
     }
 
     public List<Integer> getAvailable_period() {
@@ -63,12 +42,12 @@ public class Limitation {
         this.available_period = available_period;
     }
 
-    public List<Integer> getNonavailable_period() {
-        return nonavailable_period;
+    public List<Integer> getNon_available_period() {
+        return non_available_period;
     }
 
-    public void setNonavailable_period(List<Integer> nonavailable_period) {
-        this.nonavailable_period = nonavailable_period;
+    public void setNon_available_period(List<Integer> non_available_period) {
+        this.non_available_period = non_available_period;
     }
 
     public int getContinue_period() {
