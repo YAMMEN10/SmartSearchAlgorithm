@@ -1,8 +1,8 @@
 {
     "days": [
         {
-            "day_name": "sunday",
-            "Period": [
+            "day_name": "Sunday",
+            "periods": [
                 {
                     "subject_name": "name",
                     "total_student": 180
@@ -18,13 +18,19 @@
             ]
         }
     ],
-    "Theater": [
+    "theater": [
         {
-            "threat_name": "name",
-            "size_student": 100,
+            "theater_name": "name",
+            "student_size": 100,
             "floor_number": 1,
             "watcher_number": 2
-        }
+        },
+         {
+                    "theater_name": "name1",
+                    "student_size": 1001,
+                    "floor_number": 11,
+                    "watcher_number": 21
+                }
     ],
     "boss": {
         "watch_count": 1,
@@ -34,36 +40,36 @@
                 "limitation": {
                     "basic_condition": {
                         "days_condition": {
-                            "can_get": [
-                                "sunday",
-                                "monday"
+                            "available_basic_day": [
+                                "Sunday",
+                                "Monday"
                             ],
-                            "cant_not_get": [
-                                "thirday"
+                            "unavailable_basic_day": [
+                                "Thirthday"
                             ]
                         },
                         "period_condition": {
-                            "can_get": [
-                                "Period1",
-                                "Period2"
+                            "available_basic_period": [
+                                "22",
+                                "13"
                             ],
-                            "cant_not_get": [
-                                "Period3"
+                            "unavailable_basic_period": [
+                                "43"
                             ],
-                            "count_of_period_max": 2
+                            "max_of_period": 2
                         }
                     },
-                    "favorite": {
+                    "favorite_condition": {
                         "days_condition": {
-                            "favorite_get": [
-                                "sunday",
-                                "monday"
+                            "available_favorite_day": [
+                                "Frieday",
+                                "Frieday"
                             ]
                         },
                         "period_condition": {
-                            "favorite_gett": [
-                                "Period1",
-                                "Period2"
+                            "unavailable_favorite_period": [
+                                "99",
+                                "321"
                             ]
                         }
                     }
@@ -75,40 +81,40 @@
         "watch_count": 1,
         "names": [
             {
-                "student_name": "",
+                "boss_name": "d",
                 "limitation": {
                     "basic_condition": {
                         "days_condition": {
-                            "can_get": [
-                                "sunday",
-                                "monday"
+                            "available_basic_day": [
+                                "Frieday",
+                                "Strday"
                             ],
-                            "cant_not_get": [
-                                "thirday"
+                            "unavailable_basic_day": [
+                                "Tuthday"
                             ]
                         },
                         "period_condition": {
-                            "can_get": [
-                                "Period1",
-                                "Period2"
+                            "available_basic_period": [
+                                "44",
+                                "33"
                             ],
-                            "cant_not_get": [
-                                "Period3"
+                            "unavailable_basic_period": [
+                                "22"
                             ],
-                            "count_of_period_max": 2
+                            "max_of_period": 2
                         }
                     },
-                    "favorite": {
+                    "favorite_condition": {
                         "days_condition": {
-                            "favorite_get": [
-                                "sunday",
-                                "monday"
+                            "available_favorite_day": [
+                                "Tuthday",
+                                "Tuthday"
                             ]
                         },
                         "period_condition": {
-                            "favorite_gett": [
-                                "Period1",
-                                "Period2"
+                            "unavailable_favorite_period": [
+                                "6",
+                                "7"
                             ]
                         }
                     }

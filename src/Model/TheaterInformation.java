@@ -1,37 +1,18 @@
 package Model;
 
-import java.util.*;
-
-/**
- * 
- */
 public class TheaterInformation {
 
-    /**
-     * Default constructor
-     */
-    public TheaterInformation() {
+    public TheaterInformation(String name, int students_size, int floor_number, int required_watcher) {
+        this.name = name;
+        this.students_size = students_size;
+        this.floor_number = floor_number;
+        this.required_watcher = required_watcher;
     }
 
-    /**
-     * 
-     */
     private String name;
-
-    /**
-     * 
-     */
     private int students_size;
-
-    /**
-     * 
-     */
     private int floor_number;
-
-    /**
-     * 
-     */
-    private int requrament_watcher;
+    private int required_watcher;
 
     public String getName() {
         return name;
@@ -57,11 +38,11 @@ public class TheaterInformation {
         this.floor_number = floor_number;
     }
 
-    public int getRequrament_watcher() {
-        return requrament_watcher;
+    public int getRequired_watcher() {
+        return required_watcher;
     }
 
-    public void setRequrament_watcher(int requrament_watcher) {
-        this.requrament_watcher = requrament_watcher;
+    public void setRequired_watcher(int required_watcher) {
+        this.required_watcher = required_watcher;
     }
 }

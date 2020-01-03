@@ -5,10 +5,8 @@ package Model;
  */
 public class Employee extends WithOutLimitation {
 
-    /**
-     * Default constructor
-     */
-    public Employee() {
-    }
 
+    public Employee(String name) {
+        super(name);
+    }
 }

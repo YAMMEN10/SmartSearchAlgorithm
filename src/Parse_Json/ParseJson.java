@@ -1,9 +1,6 @@
 package Parse_Json;
 
-import Model.Boss;
-import Model.DayName;
-import Model.Limitation;
-import Model.Rule;
+import Model.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -12,20 +9,38 @@ import java.util.List;
 
 public class ParseJson {
 
-    public ParseJson(Rule rule) {
-        this.rule = rule;
-    }
-
     private Rule rule;
 
-    public void extract_data() {
-
+    public void extract_data(JSONObject input_json) {
+        List<MasterStudent> temp = getMasterStudent(input_json);
+        System.out.println("Finish");
     }
 
-    public List<Boss> getBosses(JSONObject input_boss) {
-        int watcher_count = input_boss.getInt("watch_count");
+
+    private List<DayInformation> getDayInformation(JSONObject input_json) {
+        List<DayInformation> days = new ArrayList<>();
+        JSONArray days_json = input_json.getJSONArray("days");
+        for (int i = 0; i < days_json.length(); i++) {
+            JSONObject item_day = days_json.getJSONObject(i);
+            String day_name = item_day.getString("day_name");
+            JSONArray periods_json = item_day.getJSONArray("periods");
+            List<PeriodInformation> periods = new ArrayList<>();
+            for (int j = 0; j < periods_json.length(); j++) {
+                JSONObject item_period = periods_json.getJSONObject(j);
+                String subject_name = item_period.getString("subject_name");
+                int total_student = item_period.getInt("total_student");
+                periods.add(new PeriodInformation(subject_name, total_student));
+            }
+            days.add(new DayInformation(day_name, periods));
+        }
+        return days;
+    }
+
+    private List<Boss> getBosses(JSONObject input_json) {
+        //int watcher_count = input_boss.getInt("watch_count");
         List<Boss> bosses = new ArrayList<>();
-        JSONArray names_json = input_boss.getJSONArray("names");
+        JSONObject boss_json = input_json.getJSONObject("boss");
+        JSONArray names_json = boss_json.getJSONArray("names");
         for (int i = 0; i < names_json.length(); i++) {
             JSONObject name_item = names_json.getJSONObject(i);
             String boss_name = name_item.getString("boss_name");
@@ -34,11 +49,10 @@ public class ParseJson {
             bosses.add(new Boss(boss_name, basic, favorite));
         }
         return bosses;
-
     }
 
-    private Limitation getBasicLimitation(JSONObject name_item) {
-        JSONObject basic_limitation = name_item.getJSONObject("limitation").getJSONObject("basic_condition");
+    private Limitation getBasicLimitation(JSONObject input_json) {
+        JSONObject basic_limitation = input_json.getJSONObject("limitation").getJSONObject("basic_condition");
         JSONArray can_get_days_condition_json_array = basic_limitation.getJSONObject("days_condition").getJSONArray("available_basic_day");
         JSONArray can_not_get_days_condition_json_array = basic_limitation.getJSONObject("days_condition").getJSONArray("unavailable_basic_day");
         List<DayName> can_get_day_condition = new ArrayList<>();
@@ -52,7 +66,7 @@ public class ParseJson {
 
         JSONArray can_get_period_json_array = basic_limitation.getJSONObject("period_condition").getJSONArray("available_basic_period");
         JSONArray can_not_get_period_json_array = basic_limitation.getJSONObject("period_condition").getJSONArray("unavailable_basic_period");
-        int max_of_period = basic_limitation.getJSONObject("period_condition").getInt("count_of_period_max");
+        int max_of_period = basic_limitation.getJSONObject("period_condition").getInt("max_of_period");
         List<Integer> can_get_period = new ArrayList<>();
         for (int j = 0; j < can_get_period_json_array.length(); j++) {
             can_get_period.add(can_get_period_json_array.getInt(j));
@@ -65,8 +79,8 @@ public class ParseJson {
         return limitation;
     }
 
-    private Limitation getFavoriteLimitation(JSONObject name_item) {
-        JSONObject favorite_limitation_json = name_item.getJSONObject("limitation").getJSONObject("favorite_condition");
+    private Limitation getFavoriteLimitation(JSONObject input_json) {
+        JSONObject favorite_limitation_json = input_json.getJSONObject("limitation").getJSONObject("favorite_condition");
         JSONArray can_getfavorite_json_array = favorite_limitation_json.getJSONObject("days_condition").getJSONArray("available_favorite_day");
         List<DayName> can_get_day_condition_favortie = new ArrayList<>();
         for (int j = 0; j < can_getfavorite_json_array.length(); j++) {
@@ -82,5 +96,40 @@ public class ParseJson {
         return favorite_limitation;
     }
 
+    private List<TheaterInformation> getTheaterInformation(JSONObject input_json) {
+        List<TheaterInformation> theaters = new ArrayList<>();
+        JSONArray theater_json = input_json.getJSONArray("theater");
+        for (int i = 0; i < theater_json.length(); i++) {
+            JSONObject item_theater = theater_json.getJSONObject(i);
+            String theater_name = item_theater.getString("theater_name");
+            int student_size = item_theater.getInt("student_size");
+            int floor_number = item_theater.getInt("floor_number");
+            int watcher_number = item_theater.getInt("watcher_number");
+            theaters.add(new TheaterInformation(theater_name, student_size, floor_number, watcher_number));
+        }
+        return theaters;
+    }
 
+    private List<MasterStudent> getMasterStudent(JSONObject input_json) {
+        // int watcher_count = input_boss.getInt("watch_count");
+        List<MasterStudent> master_students = new ArrayList<>();
+        JSONObject boss_json = input_json.getJSONObject("master_student");
+        JSONArray names_json = boss_json.getJSONArray("names");
+        for (int i = 0; i < names_json.length(); i++) {
+            JSONObject name_item = names_json.getJSONObject(i);
+            String boss_name = name_item.getString("boss_name");
+            Limitation basic = getBasicLimitation(name_item);
+            Limitation favorite = getFavoriteLimitation(name_item);
+            master_students.add(new MasterStudent(boss_name, basic, favorite));
+        }
+        return master_students;
+    }
+
+    public Rule getRule() {
+        return rule;
+    }
+
+    public void setRule(Rule rule) {
+        this.rule = rule;
+    }
 }
