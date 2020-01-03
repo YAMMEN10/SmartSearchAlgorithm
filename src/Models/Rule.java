@@ -1,23 +1,23 @@
-package Model;
+package Models;
 
 import java.util.List;
 
 public class Rule {
 
-    public Rule(List<TheaterInformation> avaliable_theater, int employee_watches, int profesor_watches, int enginer_watches, int master_student_watches, List<Boss> bosses, List<Secretary> secretareis, List<DayInformation> days_information, List<MasterStudent> master_students, List<Employee> employees) {
-        this.available_theater = avaliable_theater;
-        this.employee_watches = employee_watches;
-        this.professor_watches = profesor_watches;
-        this.engineer_watches = enginer_watches;
-        this.master_student_watches = master_student_watches;
-        this.bosses = bosses;
-        this.secretaries = secretareis;
+    public Rule(List<TheaterInformation> available_theater, List<DayInformation> days_information, List<Boss> bosses, List<Secretary> secretaries, List<MasterStudent> master_students, List<Employee> employees, int employee_watches, int professor_watches, int engineer_watches, int master_student_watches) {
+        this.theaters = available_theater;
         this.days_information = days_information;
+        this.bosses = bosses;
+        this.secretaries = secretaries;
         this.master_students = master_students;
         this.employees = employees;
+        this.employee_watches = employee_watches;
+        this.professor_watches = professor_watches;
+        this.engineer_watches = engineer_watches;
+        this.master_student_watches = master_student_watches;
     }
 
-    private List<TheaterInformation> available_theater;
+    private List<TheaterInformation> theaters;
     private List<DayInformation> days_information;
     private List<Boss> bosses;
     private List<Secretary> secretaries;
@@ -28,12 +28,12 @@ public class Rule {
     private int engineer_watches;
     private int master_student_watches;
 
-    public List<TheaterInformation> getAvailable_theater() {
-        return available_theater;
+    public List<TheaterInformation> getTheaters() {
+        return theaters;
     }
 
-    public void setAvailable_theater(List<TheaterInformation> available_theater) {
-        this.available_theater = available_theater;
+    public void setTheaters(List<TheaterInformation> theaters) {
+        this.theaters = theaters;
     }
 
     public List<DayInformation> getDays_information() {

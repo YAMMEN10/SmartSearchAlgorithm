@@ -1,10 +1,5 @@
-package Model;
+package Models;
 
-import java.util.*;
-
-/**
- * 
- */
 public abstract class UniversityMember {
 
     public UniversityMember(String name) {

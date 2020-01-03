@@ -1,10 +1,5 @@
-package Model;
+package Models;
 
-import java.util.*;
-
-/**
- * 
- */
 public class WithOutLimitation extends UniversityMember {
 
     public WithOutLimitation(String name) {

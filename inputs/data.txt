@@ -25,12 +25,12 @@
             "floor_number": 1,
             "watcher_number": 2
         },
-         {
-                    "theater_name": "name1",
-                    "student_size": 1001,
-                    "floor_number": 11,
-                    "watcher_number": 21
-                }
+        {
+            "theater_name": "name1",
+            "student_size": 1001,
+            "floor_number": 11,
+            "watcher_number": 21
+        }
     ],
     "boss": {
         "watch_count": 1,
@@ -134,7 +134,10 @@
         "watch_count": 2,
         "names": [
             {
-                "secretary_name": "mahmod"
+                "employee_name": "mahmod"
+            },
+            {
+                "employee_name": "yamen"
             }
         ]
     }

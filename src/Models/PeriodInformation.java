@@ -1,4 +1,4 @@
-package Model;
+package Models;
 
 public class PeriodInformation {
     private String subject_name;

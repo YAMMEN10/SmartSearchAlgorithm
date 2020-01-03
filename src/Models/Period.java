@@ -1,4 +1,4 @@
-package Model;
+package Models;
 
 import java.util.List;
 
@@ -7,25 +7,12 @@ import java.util.List;
  */
 public class Period {
 
-    /**
-     * Default constructor
-     */
-    public Period() {
-    }
-
     public Period(PeriodInformation period_information, List<Theater> theaters) {
         this.period_information = period_information;
         this.theaters = theaters;
     }
 
-    /**
-     *
-     */
     private PeriodInformation period_information;
-
-    /**
-     *
-     */
     private List<Theater> theaters;
 
     public PeriodInformation getPeriod_information() {

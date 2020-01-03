@@ -1,21 +1,9 @@
-package Model;
+package Models;
 
-import java.util.*;
+import java.util.List;
 
-/**
- * 
- */
 public class StateTableClass {
 
-    /**
-     * Default constructor
-     */
-    public StateTableClass() {
-    }
-
-    /**
-     * 
-     */
     private List<Day> days;
 
     public List<Day> getDays() {

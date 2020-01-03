@@ -1,8 +1,5 @@
-package Model;
+package Models;
 
-/**
- * 
- */
 public enum DayName {
     Strday,
     Sunday,

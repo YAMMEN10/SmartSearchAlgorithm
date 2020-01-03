@@ -1,10 +1,5 @@
-package Model;
+package Models;
 
-import java.util.*;
-
-/**
- * 
- */
 public class WithLimitation extends UniversityMember {
 
     private Limitation basic_limitaction;

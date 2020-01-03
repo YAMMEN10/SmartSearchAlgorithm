@@ -1,4 +1,4 @@
-package Model;
+package Models;
 
 import java.util.*;
 
@@ -7,16 +7,6 @@ import java.util.*;
  */
 public class Day {
 
-    /**
-     * Default constructor
-     */
-    public Day() {
-    }
-
-
-    /**
-     *
-     */
     private List<Period> periods;
     private DayInformation day_information;
 
