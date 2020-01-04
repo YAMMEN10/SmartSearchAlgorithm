@@ -6,8 +6,8 @@ public class WithLimitation extends UniversityMember {
 
     private Limitation un_basic_limitaction;
 
-    public WithLimitation(String name, Limitation basic_limitaction, Limitation un_basic_limitaction) {
-        super(name);
+    public WithLimitation(int current_watching, String name, Limitation basic_limitaction, Limitation un_basic_limitaction) {
+        super(current_watching, name);
         this.basic_limitaction = basic_limitaction;
         this.un_basic_limitaction = un_basic_limitaction;
     }

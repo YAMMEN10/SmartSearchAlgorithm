@@ -53,7 +53,7 @@ public class ParseJson {
             String boss_name = name_item.getString("boss_name");
             Limitation basic = getBasicLimitation(name_item);
             Limitation favorite = getFavoriteLimitation(name_item);
-            bosses.add(new Boss(boss_name, basic, favorite));
+            bosses.add(new Boss(0,boss_name, basic, favorite));
         }
         return bosses;
     }
@@ -127,7 +127,7 @@ public class ParseJson {
             String boss_name = name_item.getString("boss_name");
             Limitation basic = getBasicLimitation(name_item);
             Limitation favorite = getFavoriteLimitation(name_item);
-            master_students.add(new MasterStudent(boss_name, basic, favorite));
+            master_students.add(new MasterStudent(0,boss_name, basic, favorite));
         }
         return master_students;
     }
@@ -138,7 +138,7 @@ public class ParseJson {
 //        int watch_count = employee_json.getInt("watch_count");
         JSONArray names = employee_json.getJSONArray("names");
         for (int i = 0; i < names.length(); i++) {
-            employees.add(new Employee(names.getJSONObject(i).getString("employee_name")));
+            employees.add(new Employee(0,names.getJSONObject(i).getString("employee_name")));
         }
         return employees;
     }
@@ -149,7 +149,7 @@ public class ParseJson {
 //        int watch_count = employee_json.getInt("watch_count");
         JSONArray names = employee_json.getJSONArray("names");
         for (int i = 0; i < names.length(); i++) {
-            secretaries.add(new Secretary(names.getJSONObject(i).getString("secretary_name"),getBasicLimitation(names.getJSONObject(i)),getFavoriteLimitation(names.getJSONObject(i))));
+            secretaries.add(new Secretary(0,names.getJSONObject(i).getString("secretary_name"),getBasicLimitation(names.getJSONObject(i)),getFavoriteLimitation(names.getJSONObject(i))));
         }
         return secretaries;
     }

@@ -2,9 +2,6 @@ package Models;
 
 import java.util.*;
 
-/**
- *
- */
 public class Day {
 
     private List<Period> periods;
