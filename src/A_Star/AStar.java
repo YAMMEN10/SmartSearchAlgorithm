@@ -9,7 +9,6 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class AStar {
 
@@ -43,9 +42,17 @@ public class AStar {
         for (int day = 0; day < this.rule.getDays_information().size(); day++) {
             List<PeriodInformation> periods = this.rule.getDays_information().get(day).getPeriod_information();
             for (PeriodInformation period1 : periods) {
-                List<Integer> temp_theaters_size=new ArrayList<>();
-                Collections.copy(theaters_size,temp_theaters_size);
-                List<Integer> thater_indexs = getBestTheaterBasedStudentNumber(period1.getTotal_student(),temp_theaters_size);
+                List<Integer> temp_theaters_size = new ArrayList<>();
+                Collections.copy(theaters_size, temp_theaters_size);
+                List<Integer> theater_indexs = getBestTheaterBasedStudentNumber(period1.getTotal_student(), temp_theaters_size);
+                for (int theate = 0; theate < theater_indexs.size(); theate++) {
+                    for(int boss = 0; boss < rule.getBosses().size(); boss++){
+
+
+
+                    }
+                }
+
 
             }
         }
@@ -66,7 +73,7 @@ public class AStar {
         BinarySearch binarySearch = new BinarySearch();
         List<Integer> best_theaters = new ArrayList<>();
         while (total_student > 0) {
-            Pair<Integer, Integer> pair = binarySearch.binarySearch(theaters_size, 0, theaters_size.size()-1, total_student);
+            Pair<Integer, Integer> pair = binarySearch.binarySearch(theaters_size, 0, theaters_size.size() - 1, total_student);
             total_student -= pair.getValue();
             best_theaters.add(pair.getKey());
             theaters_size.remove(pair.getValue());
