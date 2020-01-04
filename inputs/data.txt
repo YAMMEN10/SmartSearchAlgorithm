@@ -39,7 +39,7 @@
         },
 		  {
             "theater_name": "name",
-            "student_size": 1,
+            "student_size": 30,
             "floor_number": 1,
             "watcher_number": 2
         }
