@@ -21,15 +21,27 @@
     "theater": [
         {
             "theater_name": "name",
-            "student_size": 100,
+            "student_size": 66,
             "floor_number": 1,
             "watcher_number": 2
         },
         {
             "theater_name": "name1",
-            "student_size": 1001,
+            "student_size": 100,
             "floor_number": 11,
             "watcher_number": 21
+        },
+		  {
+            "theater_name": "name",
+            "student_size": 30,
+            "floor_number": 1,
+            "watcher_number": 2
+        },
+		  {
+            "theater_name": "name",
+            "student_size": 1,
+            "floor_number": 1,
+            "watcher_number": 2
         }
     ],
     "boss": {
