@@ -1,9 +1,6 @@
 package A_Star;
 
-import Models.PeriodInformation;
-import Models.Rule;
-import Models.SecretaryFormatted;
-import Models.StateTableClass;
+import Models.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,8 +24,8 @@ public class AStar {
             return -1;
 
         });
-        SecretaryFormatted secretaryFormatted = new SecretaryFormatted();
-        secretaryFormatted.pushAllSecretary(rule.getSecretaries());
+        MasterStudentFormated secretaryFormatted = new MasterStudentFormated();
+        secretaryFormatted.pushAllMasterStudent(rule.getMaster_students());
 
     }
 

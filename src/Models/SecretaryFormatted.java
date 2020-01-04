@@ -41,7 +41,7 @@ public class SecretaryFormatted {
                     }
                 }
                 if (basic_liitation.getAvailable_period() != null) {
-                    for (int j = 0; j < basic_liitation.getAvailable_days().size(); j++) {
+                    for (int j = 0; j < basic_liitation.getAvailable_period().size(); j++) {
                         if (this.period_secretary.get(basic_liitation.getAvailable_period().get(j)) == null) {
                             this.period_secretary.put(basic_liitation.getAvailable_period().get(j), new PriorityQueue<>(comparator));
                         } else {

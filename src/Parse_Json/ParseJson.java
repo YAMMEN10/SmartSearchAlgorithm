@@ -127,7 +127,7 @@ public class ParseJson {
             String boss_name = name_item.getString("boss_name");
             Limitation basic = getBasicLimitation(name_item);
             Limitation favorite = getFavoriteLimitation(name_item);
-            master_students.add(new MasterStudent(0,boss_name, basic, favorite));
+            master_students.add(new MasterStudent(i,boss_name, basic, favorite));
         }
         return master_students;
     }
