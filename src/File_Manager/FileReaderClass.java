@@ -2,11 +2,11 @@ package File_Manager;
 
 import java.io.*;
 
-public class FileReader {
+public class FileReaderClass {
     private String path;
 
 
-    public FileReader(String path) {
+    public FileReaderClass(String path) {
         this.path = path;
     }
 

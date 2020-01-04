@@ -1,6 +1,6 @@
 package Parse_Json;
 
-import File_Manager.FileReader;
+import File_Manager.FileReaderClass;
 import Models.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -13,12 +13,14 @@ public class ParseJson {
     private Rule rule;
 
     public ParseJson() {
-        FileReader file_reader = new FileReader("inputs/data.txt");
+        FileReaderClass file_reader = new FileReaderClass("inputs/data.txt");
         JSONObject input_json = new JSONObject(file_reader.ReadInput());
         rule = new Rule(getTheaterInformation(input_json), getDayInformation(input_json), getBosses(input_json),
                 getSecretary(input_json), getMasterStudent(input_json), getEmployee(input_json),
                 getEmployeeWatches(input_json), getProfessorWatches(input_json), getEngineerWatches(input_json),
                 getMasterWatches(input_json));
+
+        System.out.println();
     }
 
 
@@ -147,7 +149,7 @@ public class ParseJson {
 //        int watch_count = employee_json.getInt("watch_count");
         JSONArray names = employee_json.getJSONArray("names");
         for (int i = 0; i < names.length(); i++) {
-            secretaries.add(new Secretary(names.getJSONObject(i).getString("secretary_name")));
+            secretaries.add(new Secretary(names.getJSONObject(i).getString("secretary_name"),getBasicLimitation(names.getJSONObject(i)),getFavoriteLimitation(names.getJSONObject(i))));
         }
         return secretaries;
     }
