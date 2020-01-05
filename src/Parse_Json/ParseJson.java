@@ -1,7 +1,16 @@
 package Parse_Json;
 
 import File_Manager.FileReaderClass;
-import Models.*;
+import Models.Boss_Classes.Boss;
+import Models.Day_Classes.DayInformation;
+import Models.Day_Classes.DayName;
+import Models.Employee_Classes.Employee;
+import Models.Master_Student_Classes.MasterStudent;
+import Models.Period_Classes.PeriodInformation;
+import Models.Rule_Classes.Limitation;
+import Models.Rule_Classes.Rule;
+import Models.Secretary_Classes.Secretary;
+import Models.Theater_Classes.TheaterInformation;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -36,8 +45,8 @@ public class ParseJson {
                 JSONObject item_period = periods_json.getJSONObject(j);
                 String subject_name = item_period.getString("subject_name");
                 int total_student = item_period.getInt("total_student");
-                int period_number=item_period.getInt("period_number");
-                periods.add(new PeriodInformation(subject_name, total_student,period_number));
+                int period_number = item_period.getInt("period_number");
+                periods.add(new PeriodInformation(subject_name, total_student, period_number));
             }
             days.add(new DayInformation(day_name, periods));
         }

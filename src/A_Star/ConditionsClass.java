@@ -1,9 +1,8 @@
 package A_Star;
 
-import Models.Boss;
-import Models.Rule;
-import Models.StateTableClass;
-import Models.TheaterInformation;
+import Models.Rule_Classes.Rule;
+import Models.State_Classes.StateTableClass;
+import Models.Theater_Classes.TheaterInformation;
 import javafx.util.Pair;
 
 import java.util.*;
