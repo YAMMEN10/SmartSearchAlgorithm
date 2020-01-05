@@ -35,18 +35,18 @@ public class SecretaryFormatted {
 
                         if (this.day_secretary.get(basic_liitation.getAvailable_days().get(j)) == null) {
                             this.day_secretary.put(basic_liitation.getAvailable_days().get(j), new PriorityQueue<Secretary>(10, comparator));
-                        } else {
-                            this.day_secretary.get(basic_liitation.getAvailable_days().get(j)).add(all_secretary.get(i));
                         }
+                            this.day_secretary.get(basic_liitation.getAvailable_days().get(j)).add(all_secretary.get(i));
+
                     }
                 }
                 if (basic_liitation.getAvailable_period() != null) {
                     for (int j = 0; j < basic_liitation.getAvailable_period().size(); j++) {
                         if (this.period_secretary.get(basic_liitation.getAvailable_period().get(j)) == null) {
                             this.period_secretary.put(basic_liitation.getAvailable_period().get(j), new PriorityQueue<>(comparator));
-                        } else {
-                            this.period_secretary.get(basic_liitation.getAvailable_period().get(j)).add(all_secretary.get(i));
                         }
+                            this.period_secretary.get(basic_liitation.getAvailable_period().get(j)).add(all_secretary.get(i));
+
                     }
                 }
             }
@@ -56,18 +56,18 @@ public class SecretaryFormatted {
                     for (int j = 0; j < favorite_liitation.getAvailable_days().size(); j++) {
                         if (this.day_favorite_secretary.get(favorite_liitation.getAvailable_days().get(j)) == null) {
                             this.day_favorite_secretary.put(favorite_liitation.getAvailable_days().get(j), new PriorityQueue<Secretary>(comparator));
-                        } else {
-                            this.day_favorite_secretary.get(favorite_liitation.getAvailable_days().get(j)).add(all_secretary.get(i));
                         }
+                            this.day_favorite_secretary.get(favorite_liitation.getAvailable_days().get(j)).add(all_secretary.get(i));
+
                     }
                 }
                 if (favorite_liitation.getAvailable_period() != null) {
                     for (int j = 0; j < favorite_liitation.getAvailable_period().size(); j++) {
                         if (this.period_favorite_secretary.get(favorite_liitation.getAvailable_period().get(j)) == null) {
                             this.period_favorite_secretary.put(favorite_liitation.getAvailable_period().get(j), new PriorityQueue<Secretary>(comparator));
-                        } else {
-                            this.period_favorite_secretary.get(favorite_liitation.getAvailable_period().get(j)).add(all_secretary.get(i));
                         }
+                            this.period_favorite_secretary.get(favorite_liitation.getAvailable_period().get(j)).add(all_secretary.get(i));
+
                     }
                 }
             }

@@ -15,6 +15,13 @@ public class Rule {
         this.professor_watches = professor_watches;
         this.engineer_watches = engineer_watches;
         this.master_student_watches = master_student_watches;
+
+        masterStudentFormated.pushAllMasterStudent(this.getMaster_students());
+        secretaryFormatted.pushAllSecretary(this.getSecretaries());
+        bossFormatted.pushAllBoss(this.getBosses());
+
+
+
     }
 
     private List<TheaterInformation> theaters;
@@ -27,6 +34,12 @@ public class Rule {
     private int professor_watches;
     private int engineer_watches;
     private int master_student_watches;
+    private MasterStudentFormated masterStudentFormated = new MasterStudentFormated();
+
+    private SecretaryFormatted secretaryFormatted = new SecretaryFormatted();
+
+    private BossFormatted bossFormatted = new BossFormatted();
+
 
     public List<TheaterInformation> getTheaters() {
         return theaters;

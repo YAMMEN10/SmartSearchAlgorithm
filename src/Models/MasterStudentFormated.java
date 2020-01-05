@@ -35,18 +35,18 @@ public class MasterStudentFormated {
 
                         if (this.day_secretary.get(basic_limitation.getAvailable_days().get(j)) == null) {
                             this.day_secretary.put(basic_limitation.getAvailable_days().get(j), new PriorityQueue<MasterStudent>(10, comparator));
-                        } else {
-                            this.day_secretary.get(basic_limitation.getAvailable_days().get(j)).add(all_master_student.get(i));
                         }
+                        this.day_secretary.get(basic_limitation.getAvailable_days().get(j)).add(all_master_student.get(i));
+
                     }
                 }
                 if (basic_limitation.getAvailable_period() != null) {
                     for (int j = 0; j < basic_limitation.getAvailable_period().size(); j++) {
                         if (this.period_secretary.get(basic_limitation.getAvailable_period().get(j)) == null) {
                             this.period_secretary.put(basic_limitation.getAvailable_period().get(j), new PriorityQueue<>(comparator));
-                        } else {
-                            this.period_secretary.get(basic_limitation.getAvailable_period().get(j)).add(all_master_student.get(i));
                         }
+                        this.period_secretary.get(basic_limitation.getAvailable_period().get(j)).add(all_master_student.get(i));
+
                     }
                 }
             }
@@ -56,18 +56,18 @@ public class MasterStudentFormated {
                     for (int j = 0; j < favorite_limitation.getAvailable_days().size(); j++) {
                         if (this.day_favorite_secretary.get(favorite_limitation.getAvailable_days().get(j)) == null) {
                             this.day_favorite_secretary.put(favorite_limitation.getAvailable_days().get(j), new PriorityQueue<MasterStudent>(comparator));
-                        } else {
-                            this.day_favorite_secretary.get(favorite_limitation.getAvailable_days().get(j)).add(all_master_student.get(i));
                         }
+                        this.day_favorite_secretary.get(favorite_limitation.getAvailable_days().get(j)).add(all_master_student.get(i));
+
                     }
                 }
                 if (favorite_limitation.getAvailable_period() != null) {
                     for (int j = 0; j < favorite_limitation.getAvailable_period().size(); j++) {
                         if (this.period_favorite_secretary.get(favorite_limitation.getAvailable_period().get(j)) == null) {
                             this.period_favorite_secretary.put(favorite_limitation.getAvailable_period().get(j), new PriorityQueue<MasterStudent>(comparator));
-                        } else {
-                            this.period_favorite_secretary.get(favorite_limitation.getAvailable_period().get(j)).add(all_master_student.get(i));
                         }
+                        this.period_favorite_secretary.get(favorite_limitation.getAvailable_period().get(j)).add(all_master_student.get(i));
+
                     }
                 }
             }
