@@ -5,15 +5,18 @@
             "periods": [
                 {
                     "subject_name": "name",
-                    "total_student": 180
+                    "total_student": 180,
+                    "period_number": 1
                 },
                 {
                     "subject_name": "name",
-                    "total_student": 180
+                    "total_student": 180,
+                    "period_number": 2
                 },
                 {
                     "subject_name": "name",
-                    "total_student": 180
+                    "total_student": 180,
+                    "period_number": 3
                 }
             ]
         }
@@ -31,13 +34,13 @@
             "floor_number": 11,
             "watcher_number": 21
         },
-		  {
+        {
             "theater_name": "name",
             "student_size": 30,
             "floor_number": 1,
             "watcher_number": 2
         },
-		  {
+        {
             "theater_name": "name",
             "student_size": 30,
             "floor_number": 1,
@@ -62,11 +65,11 @@
                         },
                         "period_condition": {
                             "available_basic_period": [
-                                "22",
-                                "13"
+                                "1",
+                                "2"
                             ],
                             "unavailable_basic_period": [
-                                "43"
+                                "3"
                             ],
                             "max_of_period": 2
                         }
@@ -80,8 +83,34 @@
                         },
                         "period_condition": {
                             "unavailable_favorite_period": [
-                                "99",
-                                "321"
+                                "1",
+                                "2"
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "boss_name": "d",
+                "limitation": {
+                    "basic_condition": {
+                        "days_condition": {
+                            "available_basic_day": [],
+                            "unavailable_basic_day": []
+                        },
+                        "period_condition": {
+                            "available_basic_period": [],
+                            "unavailable_basic_period": [],
+                            "max_of_period": 2
+                        }
+                    },
+                    "favorite_condition": {
+                        "days_condition": {
+                            "available_favorite_day": []
+                        },
+                        "period_condition": {
+                            "unavailable_favorite_period": [
+                                "2"
                             ]
                         }
                     }
@@ -137,49 +166,49 @@
                 }
             },
             {
-                            "boss_name": "d",
-                            "limitation": {
-                                "basic_condition": {
-                                    "days_condition": {
-                                        "available_basic_day": [
-                                            "Frieday",
-                                            "Strday",
-                                            "Strday",
-                                            "Strday",
-                                            "Strday",
-                                            "Strday"
-                                        ],
-                                        "unavailable_basic_day": [
-                                            "Tuthday"
-                                        ]
-                                    },
-                                    "period_condition": {
-                                        "available_basic_period": [
-                                            "44",
-                                            "33"
-                                        ],
-                                        "unavailable_basic_period": [
-                                            "22"
-                                        ],
-                                        "max_of_period": 2
-                                    }
-                                },
-                                "favorite_condition": {
-                                    "days_condition": {
-                                        "available_favorite_day": [
-                                            "Tuthday",
-                                            "Tuthday"
-                                        ]
-                                    },
-                                    "period_condition": {
-                                        "unavailable_favorite_period": [
-                                            "6",
-                                            "7"
-                                        ]
-                                    }
-                                }
-                            }
+                "boss_name": "d",
+                "limitation": {
+                    "basic_condition": {
+                        "days_condition": {
+                            "available_basic_day": [
+                                "Frieday",
+                                "Strday",
+                                "Strday",
+                                "Strday",
+                                "Strday",
+                                "Strday"
+                            ],
+                            "unavailable_basic_day": [
+                                "Tuthday"
+                            ]
+                        },
+                        "period_condition": {
+                            "available_basic_period": [
+                                "44",
+                                "33"
+                            ],
+                            "unavailable_basic_period": [
+                                "22"
+                            ],
+                            "max_of_period": 2
                         }
+                    },
+                    "favorite_condition": {
+                        "days_condition": {
+                            "available_favorite_day": [
+                                "Tuthday",
+                                "Tuthday"
+                            ]
+                        },
+                        "period_condition": {
+                            "unavailable_favorite_period": [
+                                "6",
+                                "7"
+                            ]
+                        }
+                    }
+                }
+            }
         ]
     },
     "secretary": {
@@ -188,42 +217,42 @@
             {
                 "secretary_name": "mahmod",
                 "limitation": {
-                                                    "basic_condition": {
-                                                        "days_condition": {
-                                                            "available_basic_day": [
-                                                                "Frieday",
-                                                                "Strday"
-                                                            ],
-                                                            "unavailable_basic_day": [
-                                                                "Tuthday"
-                                                            ]
-                                                        },
-                                                        "period_condition": {
-                                                            "available_basic_period": [
-                                                                "44",
-                                                                "33"
-                                                            ],
-                                                            "unavailable_basic_period": [
-                                                                "22"
-                                                            ],
-                                                            "max_of_period": 2
-                                                        }
-                                                    },
-                                                    "favorite_condition": {
-                                                        "days_condition": {
-                                                            "available_favorite_day": [
-                                                                "Tuthday",
-                                                                "Tuthday"
-                                                            ]
-                                                        },
-                                                        "period_condition": {
-                                                            "unavailable_favorite_period": [
-                                                                "6",
-                                                                "7"
-                                                            ]
-                                                        }
-                                                    }
-                                                }
+                    "basic_condition": {
+                        "days_condition": {
+                            "available_basic_day": [
+                                "Frieday",
+                                "Strday"
+                            ],
+                            "unavailable_basic_day": [
+                                "Tuthday"
+                            ]
+                        },
+                        "period_condition": {
+                            "available_basic_period": [
+                                "44",
+                                "33"
+                            ],
+                            "unavailable_basic_period": [
+                                "22"
+                            ],
+                            "max_of_period": 2
+                        }
+                    },
+                    "favorite_condition": {
+                        "days_condition": {
+                            "available_favorite_day": [
+                                "Tuthday",
+                                "Tuthday"
+                            ]
+                        },
+                        "period_condition": {
+                            "unavailable_favorite_period": [
+                                "6",
+                                "7"
+                            ]
+                        }
+                    }
+                }
             }
         ]
     },
@@ -237,6 +266,5 @@
                 "employee_name": "yamen"
             }
         ]
-
     }
 }
