@@ -7,7 +7,8 @@ public abstract class UniversityMember {
         this.name = name;
     }
 
-    public int current_watching;
+    private int current_watching;
+
 
     protected String name;
 
