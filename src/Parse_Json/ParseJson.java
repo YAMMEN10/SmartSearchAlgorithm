@@ -61,9 +61,10 @@ public class ParseJson {
         for (int i = 0; i < names_json.length(); i++) {
             JSONObject name_item = names_json.getJSONObject(i);
             String boss_name = name_item.getString("boss_name");
+            String boss_type = name_item.getString("boss_type");
             Limitation basic = getBasicLimitation(name_item);
             Limitation favorite = getFavoriteLimitation(name_item);
-            bosses.add(new Boss(0,boss_name, basic, favorite));
+            bosses.add(new Boss(0,boss_name, boss_type, basic, favorite));
         }
         return bosses;
     }
@@ -134,10 +135,10 @@ public class ParseJson {
         JSONArray names_json = boss_json.getJSONArray("names");
         for (int i = 0; i < names_json.length(); i++) {
             JSONObject name_item = names_json.getJSONObject(i);
-            String boss_name = name_item.getString("boss_name");
+            String master_student_name = name_item.getString("master_student_name");
             Limitation basic = getBasicLimitation(name_item);
             Limitation favorite = getFavoriteLimitation(name_item);
-            master_students.add(new MasterStudent(i,boss_name, basic, favorite));
+            master_students.add(new MasterStudent(i,master_student_name, basic, favorite));
         }
         return master_students;
     }

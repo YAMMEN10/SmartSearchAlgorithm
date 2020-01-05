@@ -86,35 +86,58 @@ public class AStarAlgorithmClass {
         return null;
     }
 
-    private void getBosses(int day, int period, int theater, CurrentState pop_state, PriorityQueue<Boss> temp_all_priority_queue,
+    private void getBosses(int day, int period, int theater, CurrentState pop_state, PriorityQueue<Boss> temp_all_boss_priority_queue,
                            PriorityQueue<Secretary> temp_all_secretary_priority_queue) {
-        for (int boss = 0; boss < temp_all_priority_queue.size(); boss++) {
-            Boss item_boss = temp_all_priority_queue.peek();
-            if (!bossIfExist(day, period, item_boss, pop_state)) {
-                if (item_boss.getBasic_limitaction().getAvailable_days().size() == 0 ||
-                        item_boss.getBasic_limitaction().getAvailable_days().contains(DayName.valueOf(pop_state.getDays().get(day).getDay_information().getDay_name()))) {
-                    if (item_boss.getBasic_limitaction().getAvailable_period().size() == 0 ||
-                            item_boss.getBasic_limitaction().getAvailable_period().contains(pop_state.getDays().get(day).getPeriods().get(period).getPeriod_information().getPeriod_number())) {
+        for (int boss = 0; boss < temp_all_boss_priority_queue.size(); boss++) {
+            Boss item_boss = temp_all_boss_priority_queue.peek();
+            int max_watcher = 0;
+            if (item_boss.getType().equals("Engineer")) {
+                max_watcher = rules.getProfessor_watches() - pop_state.getAll_bosses().get(item_boss.getName());
+            } else if (item_boss.getType().equals("Doctor")) {
+                max_watcher = rules.getEngineer_watches() - pop_state.getAll_bosses().get(item_boss.getName());
+            }
+            if (max_watcher > 0) {
+                if (!bossIfExist(day, period, item_boss, pop_state)) {
+                    if (item_boss.getBasic_limitaction().getAvailable_days().size() == 0 ||
+                            item_boss.getBasic_limitaction().getAvailable_days().contains(DayName.valueOf(pop_state.getDays().get(day).getDay_information().getDay_name()))) {
+                        if (item_boss.getBasic_limitaction().getAvailable_period().size() == 0 ||
+                                item_boss.getBasic_limitaction().getAvailable_period().contains(pop_state.getDays().get(day).getPeriods().get(period).getPeriod_information().getPeriod_number())) {
 //                        System.out.println("Not Exist");
-                        for (int secretary = 0; secretary < temp_all_secretary_priority_queue.size(); secretary++) {
-                            Secretary item_secretary = temp_all_secretary_priority_queue.peek();
-                            if (item_secretary.getBasic_limitaction().getAvailable_days().size() != 0 ||
-                                    item_secretary.getBasic_limitaction().getAvailable_days().contains(DayName.valueOf(pop_state.getDays().get(day).getDay_information().getDay_name()))) {
-                                if (item_secretary.getBasic_limitaction().getAvailable_period().size() == 0 ||
-                                        item_secretary.getBasic_limitaction().getAvailable_period().contains(pop_state.getDays().get(day).getPeriods().get(period).getPeriod_information().getPeriod_number())) {
-                                    //                        if (pop_state.getDays().get(day).getPeriods().get(period).getTheaters().size() == 0)
-                                    //                            pop_state.getDays().get(day).getPeriods().get(period).getTheaters().add(new Theater());
-                                    //                        pop_state.getDays().get(day).getPeriods().get(period).getTheaters().get(theater).setBoss_theater(item_boss);
-                                    //                        temp_all_priority_queue.remove(item_boss);
-                                    //                        boss = -1;
+                            for (int secretary = 0; secretary < temp_all_secretary_priority_queue.size(); secretary++) {
+                                Secretary item_secretary = temp_all_secretary_priority_queue.peek();
+                                if (item_secretary.getBasic_limitaction().getAvailable_days().size() != 0 ||
+                                        item_secretary.getBasic_limitaction().getAvailable_days().contains(DayName.valueOf(pop_state.getDays().get(day).getDay_information().getDay_name()))) {
+                                    if (item_secretary.getBasic_limitaction().getAvailable_period().size() == 0 ||
+                                            item_secretary.getBasic_limitaction().getAvailable_period().contains(pop_state.getDays().get(day).getPeriods().get(period).getPeriod_information().getPeriod_number())) {
+
+
+
+                                        //                        if (pop_state.getDays().get(day).getPeriods().get(period).getTheaters().size() == 0)
+                                        //                            pop_state.getDays().get(day).getPeriods().get(period).getTheaters().add(new Theater());
+                                        //                        pop_state.getDays().get(day).getPeriods().get(period).getTheaters().get(theater).setBoss_theater(item_boss);
+                                                                  pop_state.getAll_bosses().put(item_boss.getName(), pop_state.getAll_bosses().get(item_boss.getName()) + 1);
+                                        //                        temp_all_priority_queue.remove(item_boss);
+                                        //                        boss = -1;
+                                    }
                                 }
                             }
+
+
                         }
-
-
                     }
                 }
             }
+        }
+    }
+
+    static void combinations2(Integer[] arr, int len, int startPosition, Integer[] result) {
+        if (len == 0) {
+            System.out.println(Arrays.toString(result));
+            return;
+        }
+        for (int i = startPosition; i <= arr.length - len; i++) {
+            result[result.length - len] = arr[i];
+            combinations2(arr, len - 1, i + 1, result);
         }
     }
 
