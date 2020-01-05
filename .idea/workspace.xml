@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb5e2ce3-7005-45eb-b037-0cdb353e0828" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/inputs/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A_Star/AStar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A_Star/AStar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/SecretaryFormatted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/SecretaryFormatted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parse_Json/ParseJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parse_Json/ParseJson.java" afterDir="false" />
-    </list>
+    <list default="true" id="bb5e2ce3-7005-45eb-b037-0cdb353e0828" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +30,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Models/MasterStudentFormated.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="83">
               <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -317,14 +312,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.15934959" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.5584" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.184" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.7296" />
       <window_info anchor="bottom" id="Tool Output" order="8" weight="0.3296" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.496" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.496" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="ANTLR Preview" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.048" />
@@ -409,6 +404,7 @@
       <configuration name="Application">
         <watch expression="days.get(0).period_information.get(1)" />
         <watch expression="((MasterStudentFormated)this).comparator" custom="Models.MasterStudentFormated" />
+        <watch expression="((PriorityQueue)((HashMap.Node)((HashMap)((MasterStudentFormated)this).day_favorite_secretary).entrySet().toArray()[0]).getValue()).toArray()[0]" custom="Models.MasterStudentFormated,java.util.PriorityQueue,java.util.HashMap.Node,java.util.HashMap" />
       </configuration>
     </watches-manager>
   </component>
@@ -681,7 +677,7 @@ JSONObject input_json = new JSONObject(file_reader.ReadInput());</expression-str
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/MasterStudentFormated.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
+        <state relative-caret-position="83">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="imports" expanded="true" />
