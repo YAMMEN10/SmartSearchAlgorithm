@@ -77,4 +77,35 @@ public class MasterStudentFormated {
 
     }
 
+    public HashMap<DayName, PriorityQueue<MasterStudent>> getDay_secretary() {
+        return day_secretary;
+    }
+
+    public void setDay_secretary(HashMap<DayName, PriorityQueue<MasterStudent>> day_secretary) {
+        this.day_secretary = day_secretary;
+    }
+
+    public HashMap<Integer, PriorityQueue<MasterStudent>> getPeriod_secretary() {
+        return period_secretary;
+    }
+
+    public void setPeriod_secretary(HashMap<Integer, PriorityQueue<MasterStudent>> period_secretary) {
+        this.period_secretary = period_secretary;
+    }
+
+    public HashMap<DayName, PriorityQueue<MasterStudent>> getDay_favorite_secretary() {
+        return day_favorite_secretary;
+    }
+
+    public void setDay_favorite_secretary(HashMap<DayName, PriorityQueue<MasterStudent>> day_favorite_secretary) {
+        this.day_favorite_secretary = day_favorite_secretary;
+    }
+
+    public HashMap<Integer, PriorityQueue<MasterStudent>> getPeriod_favorite_secretary() {
+        return period_favorite_secretary;
+    }
+
+    public void setPeriod_favorite_secretary(HashMap<Integer, PriorityQueue<MasterStudent>> period_favorite_secretary) {
+        this.period_favorite_secretary = period_favorite_secretary;
+    }
 }

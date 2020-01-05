@@ -15,7 +15,9 @@ public class Rule {
         this.professor_watches = professor_watches;
         this.engineer_watches = engineer_watches;
         this.master_student_watches = master_student_watches;
-
+        masterStudentFormated = new MasterStudentFormated();
+        secretaryFormatted = new SecretaryFormatted();
+        bossFormatted = new BossFormatted();
         masterStudentFormated.pushAllMasterStudent(this.getMaster_students());
         secretaryFormatted.pushAllSecretary(this.getSecretaries());
         bossFormatted.pushAllBoss(this.getBosses());
@@ -34,12 +36,35 @@ public class Rule {
     private int professor_watches;
     private int engineer_watches;
     private int master_student_watches;
-    private MasterStudentFormated masterStudentFormated = new MasterStudentFormated();
+    private MasterStudentFormated masterStudentFormated ;
 
-    private SecretaryFormatted secretaryFormatted = new SecretaryFormatted();
+    private SecretaryFormatted secretaryFormatted ;
 
-    private BossFormatted bossFormatted = new BossFormatted();
+    private BossFormatted bossFormatted ;
 
+    public MasterStudentFormated getMasterStudentFormated() {
+        return masterStudentFormated;
+    }
+
+    public void setMasterStudentFormated(MasterStudentFormated masterStudentFormated) {
+        this.masterStudentFormated = masterStudentFormated;
+    }
+
+    public SecretaryFormatted getSecretaryFormatted() {
+        return secretaryFormatted;
+    }
+
+    public void setSecretaryFormatted(SecretaryFormatted secretaryFormatted) {
+        this.secretaryFormatted = secretaryFormatted;
+    }
+
+    public BossFormatted getBossFormatted() {
+        return bossFormatted;
+    }
+
+    public void setBossFormatted(BossFormatted bossFormatted) {
+        this.bossFormatted = bossFormatted;
+    }
 
     public List<TheaterInformation> getTheaters() {
         return theaters;

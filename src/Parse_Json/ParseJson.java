@@ -36,7 +36,8 @@ public class ParseJson {
                 JSONObject item_period = periods_json.getJSONObject(j);
                 String subject_name = item_period.getString("subject_name");
                 int total_student = item_period.getInt("total_student");
-                periods.add(new PeriodInformation(subject_name, total_student));
+                int period_number=item_period.getInt("period_number");
+                periods.add(new PeriodInformation(subject_name, total_student,period_number));
             }
             days.add(new DayInformation(day_name, periods));
         }

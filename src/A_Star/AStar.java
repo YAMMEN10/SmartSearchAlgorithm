@@ -2,10 +2,10 @@ package A_Star;
 
 import Models.*;
 
+import java.security.Security;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Queue;
+import java.util.PriorityQueue;
 
 public class AStar {
     private List<StateTableClass> stateTables;
@@ -34,17 +34,18 @@ public class AStar {
         List<Integer> theaters_size = this.conditions.getTheaterSize();
         for (int day = 0; day < this.rule.getDays_information().size(); day++) {
             List<PeriodInformation> periods = this.rule.getDays_information().get(day).getPeriod_information();
-            for (PeriodInformation period1 : periods) {
+            for (PeriodInformation period_item : periods) {
                 List<Integer> temp_theaters_size = new ArrayList<>();
-                Collections.copy(theaters_size, temp_theaters_size);
-                List<Integer> theater_index = this.conditions.getBestTheaterBasedStudentNumber(period1.getTotal_student(), temp_theaters_size);
-
-                for (int theater = 0; theater < theater_index.size(); theater++) {
-
-
-
+                this.copyList(theaters_size, temp_theaters_size);
+                List<Integer> theater_index = this.conditions.getBestTheaterBasedStudentNumber(period_item.getTotal_student(), temp_theaters_size);
+                PriorityQueue<Boss> peiodTempBoss = copyQueueForPeriod(rule.getBossFormatted().getBoss_map_available_periods().get(period_item.getPeriod_numbre()));
+                PriorityQueue<Security> priorityQueue = copyQueueForPeriod(rule.getSecretaryFormatted().getPeriod_secretary().get(period_item.getPeriod_numbre()));
+                PriorityQueue<MasterStudent> priority_master_student = copyQueueForPeriod(rule.getMasterStudentFormated().getPeriod_secretary().get(period_item.getPeriod_numbre()));
+                for(int theater  = 0 ;theater  < theater_index.size() ; theater++){
 
                 }
+
+
 
 
             }
@@ -52,14 +53,16 @@ public class AStar {
 
     }
 
-    public Queue copyQueueForPeriod(Queue queue)
-    {
-        Queue queuetemp;
-
-
-return null;
+    public PriorityQueue copyQueueForPeriod(PriorityQueue queue) {
+        PriorityQueue priorityQueue = new PriorityQueue(queue);
+        return priorityQueue;
     }
 
+    public void copyList(List source, List destination) {
+        for (int i = 0; i < source.size(); i++) {
+            destination.add(source.get(i));
+        }
 
+    }
 
 }

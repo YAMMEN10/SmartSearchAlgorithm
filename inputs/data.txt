@@ -5,15 +5,18 @@
             "periods": [
                 {
                     "subject_name": "name",
-                    "total_student": 180
+                    "total_student": 180,
+                    "period_number":1
                 },
                 {
                     "subject_name": "name",
-                    "total_student": 180
+                    "total_student": 180,
+                    "period_number":2
                 },
                 {
                     "subject_name": "name",
-                    "total_student": 180
+                    "total_student": 180,
+                    "period_number":3
                 }
             ]
         }
@@ -62,11 +65,11 @@
                         },
                         "period_condition": {
                             "available_basic_period": [
-                                "22",
-                                "13"
+                                "1",
+                                "2"
                             ],
                             "unavailable_basic_period": [
-                                "43"
+                                "3"
                             ],
                             "max_of_period": 2
                         }
@@ -80,8 +83,45 @@
                         },
                         "period_condition": {
                             "unavailable_favorite_period": [
-                                "99",
-                                "321"
+                                "1",
+                                "2"
+                            ]
+                        }
+                    }
+                }
+            },
+			{
+                "boss_name": "d",
+                "limitation": {
+                    "basic_condition": {
+                        "days_condition": {
+                            "available_basic_day": [
+
+                            ],
+                            "unavailable_basic_day": [
+
+                            ]
+                        },
+                        "period_condition": {
+                            "available_basic_period": [
+
+                            ],
+                            "unavailable_basic_period": [
+
+                            ],
+                            "max_of_period": 2
+                        }
+                    },
+                    "favorite_condition": {
+                        "days_condition": {
+                            "available_favorite_day": [
+
+                            ]
+                        },
+                        "period_condition": {
+                            "unavailable_favorite_period": [
+                            "2"
+
                             ]
                         }
                     }
