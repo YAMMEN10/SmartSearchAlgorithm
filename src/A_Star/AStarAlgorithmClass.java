@@ -2,6 +2,7 @@ package A_Star;
 
 import Models.Boss_Classes.Boss;
 import Models.Day_Classes.DayName;
+import Models.Master_Student_Classes.MasterStudent;
 import Models.Period_Classes.Period;
 import Models.Period_Classes.PeriodInformation;
 import Models.Rule_Classes.Rule;
@@ -15,9 +16,12 @@ import java.util.*;
 
 public class AStarAlgorithmClass {
     private Rule rules;
+    private List<List<MasterStudent>> master_students_require;
+
 
     public AStarAlgorithmClass(Rule rules) {
         this.rules = rules;
+        this.master_students_require = new ArrayList<>();
     }
 
     public List<CurrentState> aStarSearch(CurrentState current_state) {
@@ -73,12 +77,13 @@ public class AStarAlgorithmClass {
             for (int period = pop_state.getPeriod(); period < all_period_in_current_day.size(); period++) {
                 PriorityQueue<Boss> temp_all_boss_priority_queue = copyQueueForPeriod(rules.getBoss_priority_queue());
                 PriorityQueue<Secretary> temp_all_secretary_priority_queue = copyQueueForPeriod(rules.getSecretary_priority_queue());
+                PriorityQueue<MasterStudent> temp_all_master_student_priority_queue = copyQueueForPeriod(rules.getMaster_student_priority_queue());
                 List<Integer> copied_theater_in_current_state = new ArrayList<>();
                 this.copyList(getTheaterSize(), copied_theater_in_current_state);
                 List<Integer> all_theater_in_current_state = getBestTheaterForCurrentPeriod(pop_state.getDays().get(day).getPeriods().get(period),
                         copied_theater_in_current_state);
                 for (int theater = 0; theater < all_theater_in_current_state.size(); theater++) {
-                    getBosses(day, period, theater, pop_state, temp_all_boss_priority_queue, temp_all_secretary_priority_queue);
+                    getBosses(day, period, theater, pop_state, temp_all_boss_priority_queue, temp_all_secretary_priority_queue, rules.getMaster_students());
                 }
 
             }
@@ -87,7 +92,7 @@ public class AStarAlgorithmClass {
     }
 
     private void getBosses(int day, int period, int theater, CurrentState pop_state, PriorityQueue<Boss> temp_all_boss_priority_queue,
-                           PriorityQueue<Secretary> temp_all_secretary_priority_queue) {
+                           PriorityQueue<Secretary> temp_all_secretary_priority_queue, List<MasterStudent> temp_all_master_student_priority_queue) {
         for (int boss = 0; boss < temp_all_boss_priority_queue.size(); boss++) {
             Boss item_boss = temp_all_boss_priority_queue.peek();
             int max_watcher = 0;
@@ -110,14 +115,19 @@ public class AStarAlgorithmClass {
                                     if (item_secretary.getBasic_limitaction().getAvailable_period().size() == 0 ||
                                             item_secretary.getBasic_limitaction().getAvailable_period().contains(pop_state.getDays().get(day).getPeriods().get(period).getPeriod_information().getPeriod_number())) {
 
+                                        //testing
+                                        MasterStudent[]a = new MasterStudent[3];
+                                        a[0] = temp_all_master_student_priority_queue.get(0);
+                                        a[1] = temp_all_master_student_priority_queue.get(1);
+                                        a[2] = temp_all_master_student_priority_queue.get(1);
+                                        combinations2(a, 2, 0, new MasterStudent[2]);
 
-
-                                        //                        if (pop_state.getDays().get(day).getPeriods().get(period).getTheaters().size() == 0)
                                         //                            pop_state.getDays().get(day).getPeriods().get(period).getTheaters().add(new Theater());
                                         //                        pop_state.getDays().get(day).getPeriods().get(period).getTheaters().get(theater).setBoss_theater(item_boss);
-                                                                  pop_state.getAll_bosses().put(item_boss.getName(), pop_state.getAll_bosses().get(item_boss.getName()) + 1);
+                                        //                        pop_state.getAll_bosses().put(item_boss.getName(), pop_state.getAll_bosses().get(item_boss.getName()) + 1);
                                         //                        temp_all_priority_queue.remove(item_boss);
                                         //                        boss = -1;
+                                        System.out.println("a");
                                     }
                                 }
                             }
@@ -130,14 +140,15 @@ public class AStarAlgorithmClass {
         }
     }
 
-    static void combinations2(Integer[] arr, int len, int startPosition, Integer[] result) {
-        if (len == 0) {
-            System.out.println(Arrays.toString(result));
+
+    void combinations2(MasterStudent[] arr, int len, int startPosition, MasterStudent[] result){
+        if (len == 0){
+            this.master_students_require.add(Arrays.asList(result));
             return;
         }
-        for (int i = startPosition; i <= arr.length - len; i++) {
+        for (int i = startPosition; i <= arr.length-len; i++){
             result[result.length - len] = arr[i];
-            combinations2(arr, len - 1, i + 1, result);
+            combinations2(arr, len-1, i+1, result);
         }
     }
 
@@ -190,5 +201,14 @@ public class AStarAlgorithmClass {
     public PriorityQueue copyQueueForPeriod(PriorityQueue priorityQueue) {
         return new PriorityQueue<>(priorityQueue);
     }
+
+    public Rule getRules() {
+        return rules;
+    }
+
+    public void setRules(Rule rules) {
+        this.rules = rules;
+    }
+
 
 }

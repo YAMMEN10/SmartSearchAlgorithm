@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bb5e2ce3-7005-45eb-b037-0cdb353e0828" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/A_Star/AStarAlgorithmClass$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/A_Star/AStarAlgorithmClass$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/A_Star/AStarAlgorithmClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/A_Star/AStarAlgorithmClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/Models/Boss_Classes/Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/Models/Boss_Classes/Boss.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/Models/State_Classes/CurrentState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/Models/State_Classes/CurrentState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/Parse_Json/ParseJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSearchAlgorithm/Parse_Json/ParseJson.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/A_Star/AStarAlgorithmClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A_Star/AStarAlgorithmClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Boss_Classes/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Boss_Classes/Boss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/State_Classes/CurrentState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/State_Classes/CurrentState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parse_Json/ParseJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parse_Json/ParseJson.java" afterDir="false" />
     </list>
     <list id="06d36c34-b86e-4e12-b9e7-4775c4a8628e" name="Add Boss And Secretary" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inputs/data.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="271" column="1" selection-start-line="271" selection-start-column="1" selection-end-line="271" selection-end-column="1" />
+            <state relative-caret-position="150">
+              <caret line="252" column="34" selection-start-line="252" selection-start-column="34" selection-end-line="252" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -41,8 +32,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Rule_Classes/Rule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            <state relative-caret-position="90">
+              <caret line="124" selection-start-line="124" selection-end-line="124" />
+              <folding>
+                <element signature="e#4632#4633#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,17 +44,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/A_Star/AStarAlgorithmClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="268">
+              <caret line="121" column="74" selection-start-line="121" selection-start-column="74" selection-end-line="121" selection-end-column="74" />
               <folding>
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
                 <element signature="method#bossIfExist#0;class#AStarAlgorithmClass#0" />
                 <element signature="method#initPriorityQueue#0;class#AStarAlgorithmClass#0" />
                 <element signature="method#getBestTheaterForCurrentPeriod#0;class#AStarAlgorithmClass#0" />
                 <element signature="method#getTheaterSize#0;class#AStarAlgorithmClass#0" />
-                <element signature="e#9872#9873#0" expanded="true" />
-                <element signature="e#10005#10006#0" expanded="true" />
+                <element signature="e#10784#10785#0" expanded="true" />
+                <element signature="e#10917#10918#0" expanded="true" />
+                <element signature="e#10228#10229#0" expanded="true" />
+                <element signature="e#10256#10257#0" expanded="true" />
+                <element signature="e#10296#10297#0" expanded="true" />
+                <element signature="e#10330#10331#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="41" column="103" selection-start-line="41" selection-start-column="103" selection-end-line="41" selection-end-column="103" />
+            <state relative-caret-position="267">
+              <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -228,9 +224,9 @@
         <option value="$PROJECT_DIR$/src/Models/State_Classes/CurrentState.java" />
         <option value="$PROJECT_DIR$/src/Parse_Json/ParseJson.java" />
         <option value="$PROJECT_DIR$/src/Models/Boss_Classes/Boss.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/inputs/data.txt" />
         <option value="$PROJECT_DIR$/src/A_Star/AStarAlgorithmClass.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -241,10 +237,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1300" />
-    <option name="height" value="919" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -365,14 +361,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.048" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3312" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.048" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.504" />
       <window_info anchor="bottom" id="Tool Output" order="8" weight="0.3296" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5792" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.0608" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="ANTLR Preview" order="12" weight="0.3296" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
@@ -470,28 +466,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add Boss And Secretary" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/A_Star/AStarAlgorithmClass.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/A_Star/AStarAlgorithmClass.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/A_Star/AStarAlgorithmClass.java</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="days.get(0).period_information.get(1)" />
@@ -504,8 +478,41 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SmartSearchAlgorithm$Main.ic" NAME="Main Coverage Results" MODIFIED="1578264939836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>arr.length-len</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pop_state.getAll_bosses().get(item_boss.getName())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rules.getEngineer_watches()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rules.getEngineer_watches() - pop_state.getAll_bosses().get(item_boss.getName());</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>max_watcher</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rules.getProfessor_watches()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>pop_state.getDays().get(day).getPeriods().get(period).getTheaters().size()</expression-string>
         <language-id>JAVA</language-id>
@@ -518,41 +525,6 @@
       </expression>
       <expression>
         <expression-string>item_boss</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>temp_all_priority_queue</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>temp_all_priority_queue.size()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>temp_all_priority_queue.remove(item_boss);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>rules.getBoss_priority_queue();</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>rules.getBoss_priority_queue().remove(item_boss);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>rules.getBoss_priority_queue()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>rules.getBoss_priority_queue().remove(0);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -862,13 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Rule_Classes/Rule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Boss_Classes/Boss.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -893,15 +858,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inputs/data.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="271" column="1" selection-start-line="271" selection-start-column="1" selection-end-line="271" selection-end-column="1" />
+        <state relative-caret-position="150">
+          <caret line="252" column="34" selection-start-line="252" selection-start-column="34" selection-end-line="252" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Rule_Classes/Rule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+          <folding>
+            <element signature="e#4632#4633#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="41" column="103" selection-start-line="41" selection-start-column="103" selection-end-line="41" selection-end-column="103" />
+        <state relative-caret-position="267">
+          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -910,17 +885,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/A_Star/AStarAlgorithmClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="268">
+          <caret line="121" column="74" selection-start-line="121" selection-start-column="74" selection-end-line="121" selection-end-column="74" />
           <folding>
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
             <element signature="method#bossIfExist#0;class#AStarAlgorithmClass#0" />
             <element signature="method#initPriorityQueue#0;class#AStarAlgorithmClass#0" />
             <element signature="method#getBestTheaterForCurrentPeriod#0;class#AStarAlgorithmClass#0" />
             <element signature="method#getTheaterSize#0;class#AStarAlgorithmClass#0" />
-            <element signature="e#9872#9873#0" expanded="true" />
-            <element signature="e#10005#10006#0" expanded="true" />
+            <element signature="e#10784#10785#0" expanded="true" />
+            <element signature="e#10917#10918#0" expanded="true" />
+            <element signature="e#10228#10229#0" expanded="true" />
+            <element signature="e#10256#10257#0" expanded="true" />
+            <element signature="e#10296#10297#0" expanded="true" />
+            <element signature="e#10330#10331#0" expanded="true" />
           </folding>
         </state>
       </provider>
